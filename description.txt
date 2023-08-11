@@ -1,0 +1,13 @@
+In this SQL project, a database called "Jr_Clg" is created to manage student admissions and staff records in a junior college. The project includes:
+
+Tables: Created tables for student admissions ("Addmision_Student") and staff records ("Jr_Collage_Staff"). Divided students into categories (A, B, C, D) based on their 10th-grade percentages.
+
+Data Handling: Inserted sample data into student and staff tables. Used triggers to automatically categorize students and back up insertions.
+
+Automation: Developed triggers to sort students into divisions (A, B, C, D) based on their academic performance. Created a function to retrieve student names by ID.
+
+Queries and Procedures: Designed procedures to find students from Mumbai and teachers. Used queries to extract specific student information and perform calculations.
+
+Joining Data: Demonstrated the use of INNER JOIN to combine data from different tables.
+
+The project showcases a comprehensive approach to managing student and staff data, utilizing automation through triggers, functions, and procedures for efficient record management and data retrieval.

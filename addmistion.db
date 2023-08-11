@@ -1,0 +1,455 @@
+create database Jr_Clg;
+use Jr_Clg;
+select * from Addmision_Student;
+#creating table for all student record 
+create table Addmision_Student(St_Id int primary key AUTO_INCREMENT ,
+							   St_Full_Name VARCHAR(90) not null,
+                               St_parents_Name VARCHAR(100),
+                               St_Dob DATE not null,
+                               St_Contact_No VARCHAR(15)not null,
+                               St_10th_Percentage DECIMAL(8,2) check( St_10th_Percentage>=35)not null,
+                               St_10th_passing_year INTEGER check(St_10th_passing_year <2023)not null,
+                               St_Email VARCHAR(40),
+                               St_Gender VARCHAR(30),
+                               St_address VARCHAR(250),
+                               St_City VARCHAR(20),
+                               St_District VARCHAR(20));
+#drop table Addmision_Student;    
+#add auto increment
+#ALTER TABLE Addmision_Student
+#modify St_Id INT AUTO_INCREMENT ;
+
+#modify table adding decimal
+#ALTER TABLE addmision_student
+#modify  St_10th_Percentage DECIMAL(8, 2);
+#insert value into addmision_student
+
+insert into addmision_student values ( 261,'Pratik Jangam','Narayan Jangam','2003-06-15','8976100272',89,2018,'pratikjangam302@gmail.com','Male','Panvel','Panvel','Raigad');
+
+INSERT INTO addmision_student(St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES( 101,'Pratik Jangam','Narayan Jangam','2003-06-15','8976100272',93.54,2018,'pratikjangam302@gmail.com','Male','Panvel','Panvel','Raigad');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(102, 'Aakash Sharma', 'Rajesh Sharma', '2003-05-20', '9876543210', 91.23, 2019, 'aakashsharma@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(103, 'Divya Gupta', 'Sanjay Gupta', '2002-11-12', '1234567890', 88.76, 2018, 'divyagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(104, 'Rajiv Patel', 'Amit Patel', '2003-07-05', '5555555555', 89.54, 2018, 'rajivpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(105, 'Neha Singh', 'Rahul Singh', '2003-09-15', '9999999999', 90.87, 2019, 'nehasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal');
+
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(106, 'Kavita Verma', 'Suresh Verma', '2003-04-10', '1234567890', 87.34, 2018, 'kavitaverma@example.com', 'Female', 'Bengaluru', 'Bengaluru', 'Karnataka'),
+(107, 'Rajesh Khanna', 'Amit Khanna', '2002-12-02', '9876543210', 89.56, 2019, 'rajeshkhanna@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(108, 'Anjali Gupta', 'Rajesh Gupta', '2003-08-15', '5555555555', 88.76, 2018, 'anjaligupta@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(109, 'Vikram Patel', 'Amit Patel', '2002-11-27', '9999999999', 91.45, 2019, 'vikrampatel@example.com', 'Male', 'Hyderabad', 'Hyderabad', 'Telangana'),
+(110, 'Shruti Sharma', 'Rajesh Sharma', '2003-03-18', '1234567890', 92.30, 2018, 'shrutisharma@example.com', 'Female', 'Lucknow', 'Lucknow', 'Uttar Pradesh');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(111, 'Priya Shah', 'Amit Shah', '2003-07-15', '1234567890', 90.75, 2018, 'priyashah@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(112, 'Aryan Joshi', 'Rajesh Joshi', '2002-12-10', '9876543210', 88.90, 2019, 'aryanjoshi@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(113, 'Radha Iyer', 'Ramesh Iyer', '2003-05-25', '5555555555', 89.50, 2018, 'radhaiyer@example.com', 'Female', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(114, 'Rajat Sharma', 'Sanjay Sharma', '2002-09-05', '9999999999', 92.10, 2019, 'rajatsharma@example.com', 'Male', 'Delhi', 'Delhi', 'Delhi'),
+(115, 'Ananya Chaudhary', 'Amit Chaudhary', '2003-01-20', '1234567890', 91.80, 2018, 'ananyachaudhary@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(116, 'Sneha Desai', 'Rajesh Desai', '2003-08-10', '1234567890', 89.75, 2018, 'snehadesai@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(117, 'Vishal Reddy', 'Ramesh Reddy', '2002-11-12', '9876543210', 91.50, 2019, 'vishalreddy@example.com', 'Male', 'Bengaluru', 'Bengaluru', 'Karnataka'),
+(118, 'Kritika Patel', 'Amit Patel', '2003-05-15', '5555555555', 88.60, 2018, 'kritikapatel@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(119, 'Rahul Kumar', 'Sanjay Kumar', '2002-09-25', '9999999999', 90.25, 2019, 'rahulkumar@example.com', 'Male', 'Delhi', 'Delhi', 'Delhi'),
+(120, 'Anushka Sharma', 'Rajesh Sharma', '2003-02-18', '1234567890', 92.80, 2018, 'anushkasharma@example.com', 'Female', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(121, 'Amit Gupta', 'Rakesh Gupta', '2002-12-20', '9876543210', 87.90, 2019, 'amitgupta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(122, 'Deepika Singh', 'Rajesh Singh', '2003-05-05', '5555555555', 88.76, 2018, 'deepikasingh@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(123, 'Vivek Shah', 'Amit Shah', '2002-10-15', '9999999999', 91.45, 2019, 'vivekshah@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(124, 'Priyanka Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 90.50, 2018, 'priyankaverma@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(125, 'Rohit Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 93.20, 2019, 'rohitmalhotra@example.com', 'Male', 'Delhi', 'Delhi', 'Delhi'),
+(126, 'Nisha Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 91.90, 2018, 'nishamehta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(127, 'Ravi Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 88.45, 2019, 'ravsinha@example.com', 'Male', 'Patna', 'Patna', 'Bihar'),
+(128, 'Shreya Kapoor', 'Rajesh Kapoor', '2003-01-25', '1234567890', 92.30, 2018, 'shreyakapoor@example.com', 'Female', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(129, 'Manish Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 90.60, 2019, 'manishgupta@example.com', 'Male', 'Delhi', 'Delhi', 'Delhi'),
+(130, 'Kirti Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 89.80, 2018, 'kirtisharma@example.com', 'Female', 'Chandigarh', 'Chandigarh', 'Punjab');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(131, 'Ankit Gupta', 'Rajesh Gupta', '2003-08-05', '1234567890', 45.67, 2018, 'ankitgupta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(132, 'Kavita Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 47.80, 2019, 'kavitasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(133, 'Rahul Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 40.25, 2018, 'rahulpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(134, 'Meena Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 49.34, 2019, 'meenasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(135, 'Vishal Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 47.90, 2018, 'vishalsharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(136, 'Anjali Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 43.56, 2019, 'anjaligupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(137, 'Rakesh Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 49.76, 2018, 'rakeshverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(138, 'Neha Shah', 'Amit Shah', '2002-10-15', '9999999999', 46.45, 2019, 'nehashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(139, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 48.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(140, 'Rohini Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 42.20, 2019, 'rohinimalhotra@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(141, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 45.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(142, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 48.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(143, 'Rishi Kapoor', 'Rajesh Kapoor', '2003-01-25', '1234567890', 46.30, 2018, 'rishikapoor@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(144, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 47.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(145, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 48.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(146, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 49.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(147, 'Rohit Kumar', 'Rajesh Kumar', '2003-08-05', '1234567890', 42.67, 2018, 'rohitkumar@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(148, 'Sneha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 44.80, 2019, 'snehasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(149, 'Vishal Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 39.25, 2018, 'vishalpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(150, 'Meera Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 47.34, 2019, 'meerasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(151, 'Ankur Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 43.90, 2018, 'ankursharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(152, 'Divya Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 45.56, 2019, 'divyagupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(153, 'Rajesh Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 49.76, 2018, 'rajeshverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(154, 'Neha Shah', 'Amit Shah', '2002-10-15', '9999999999', 46.45, 2019, 'nehashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(155, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 48.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(156, 'Rohini Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 42.20, 2019, 'rohinimalhotra@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(157, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 45.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(158, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 48.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(159, 'Rishi Kapoor', 'Rajesh Kapoor', '2003-01-25', '1234567890', 46.30, 2018, 'rishikapoor@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(160, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 47.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(161, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 48.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+
+(162, 'Alisha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 63.80, 2019, 'alishasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(163, 'Rahul Kumar', 'Sanjay Kumar', '2003-07-15', '5555555555', 55.25, 2018, 'rahulkumar@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(164, 'Meena Verma', 'Ramesh Verma', '2002-09-20', '9999999999', 59.34, 2019, 'meenaverma@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(165, 'Vishal Singh', 'Rajesh Singh', '2003-04-18', '1234567890', 56.90, 2018, 'vishalsingh@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(166, 'Anjali Kapoor', 'Amit Kapoor', '2002-12-20', '9876543210', 59.56, 2019, 'anjalikapoor@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(167, 'Rakesh Sharma', 'Sanjay Sharma', '2003-05-05', '5555555555', 66.76, 2018, 'rakeshsharma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(168, 'Neha Verma', 'Amit Verma', '2002-10-15', '9999999999', 64.45, 2019, 'nehaverma@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(169, 'Rajat Singh', 'Sanjay Singh', '2003-04-06', '1234567890', 67.50, 2018, 'rajatsingh@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(170, 'Rohini Sharma', 'Ramesh Sharma', '2002-07-22', '9876543210', 62.20, 2019, 'rohinisharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(171, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 58.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(172, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 60.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(173, 'Rishi Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 65.30, 2018, 'rishikhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(174, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 59.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(175, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 58.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(176, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 69.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(177, 'Rohit Kumar', 'Rajesh Kumar', '2003-08-05', '1234567890', 61.67, 2018, 'rohitkumar@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(178, 'Sneha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 63.80, 2019, 'snehasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(179, 'Vishal Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 55.25, 2018, 'vishalpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(180, 'Meera Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 59.34, 2019, 'meerasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(181, 'Ankur Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 63.90, 2018, 'ankursharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(182, 'Divya Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 55.56, 2019, 'divyagupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(183, 'Rajesh Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 64.76, 2018, 'rajeshverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(184, 'Neha Shah', 'Amit Shah', '2002-10-15', '9999999999', 61.45, 2019, 'nehashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(185, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 67.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(186, 'Rohini Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 62.20, 2019, 'rohinimalhotra@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(187, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 58.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(188, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 60.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(189, 'Rishi Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 65.30, 2018, 'rishikhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(190, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 59.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(191, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 58.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(192, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 69.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(193, 'Aakash Patel', 'Rajesh Patel', '2003-08-05', '1234567890', 63.67, 2018, 'aakashpatel@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(194, 'Ayesha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 55.80, 2019, 'ayeshasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(195, 'Rahul Kumar', 'Sanjay Kumar', '2003-07-15', '5555555555', 59.25, 2018, 'rahulkumar@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(196, 'Meena Verma', 'Ramesh Verma', '2002-09-20', '9999999999', 62.34, 2019, 'meenaverma@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(197, 'Vishal Singh', 'Rajesh Singh', '2003-04-18', '1234567890', 66.90, 2018, 'vishalsingh@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(198, 'Anjali Kapoor', 'Amit Kapoor', '2002-12-20', '9876543210', 58.56, 2019, 'anjalikapoor@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(199, 'Rakesh Sharma', 'Sanjay Sharma', '2003-05-05', '5555555555', 61.76, 2018, 'rakeshsharma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(200, 'Neha Verma', 'Amit Verma', '2002-10-15', '9999999999', 59.45, 2019, 'nehaverma@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(201, 'Rajat Singh', 'Sanjay Singh', '2003-04-06', '1234567890', 67.50, 2018, 'rajatsingh@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(202, 'Rohini Sharma', 'Ramesh Sharma', '2002-07-22', '9876543210', 62.20, 2019, 'rohinisharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(203, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 58.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(204, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 60.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(205, 'Rishi Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 65.30, 2018, 'rishikhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(206, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 59.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(207, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 58.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(208, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 69.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(209, 'Rohit Kumar', 'Rajesh Kumar', '2003-08-05', '1234567890', 61.67, 2018, 'rohitkumar@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(210, 'Sneha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 63.80, 2019, 'snehasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(211, 'Vishal Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 55.25, 2018, 'vishalpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(212, 'Meera Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 59.34, 2019, 'meerasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(213, 'Ankur Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 63.90, 2018, 'ankursharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(214, 'Divya Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 55.56, 2019, 'divyagupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(215, 'Rajesh Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 64.76, 2018, 'rajeshverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(216, 'Neha Shah', 'Amit Shah', '2002-10-15', '9999999999', 61.45, 2019, 'nehashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(217, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 67.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(218, 'Rohini Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 62.20, 2019, 'rohinimalhotra@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(219, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 58.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(220, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 60.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(221, 'Rishi Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 65.30, 2018, 'rishikhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(222, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 59.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(223, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 58.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(224, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 69.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(225, 'Rohit Kumar', 'Rajesh Kumar', '2003-08-05', '1234567890', 61.67, 2018, 'rohitkumar@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(226, 'Sneha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 63.80, 2019, 'snehasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(227, 'Vishal Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 55.25, 2018, 'vishalpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(228, 'Meera Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 59.34, 2019, 'meerasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(229, 'Ankur Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 63.90, 2018, 'ankursharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(230, 'Divya Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 55.56, 2019, 'divyagupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra');
+
+INSERT INTO addmision_student (St_Id, St_Full_Name, St_Parents_Name, St_Dob, St_Contact_No, St_10th_Percentage, St_10th_Passing_Year, St_Email, St_Gender, St_Address, St_City, St_District)
+VALUES
+(231, 'Rajiv Gupta', 'Sanjay Gupta', '2003-08-05', '1234567890', 92.67, 2018, 'rajivgupta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(232, 'Nisha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 89.80, 2019, 'nishasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(233, 'Karan Verma', 'Sanjay Verma', '2003-07-15', '5555555555', 95.25, 2018, 'karanverma@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(234, 'Deepika Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 88.34, 2019, 'deepikasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(235, 'Arun Kumar', 'Rajesh Kumar', '2003-04-18', '1234567890', 92.90, 2018, 'arunkumar@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(236, 'Ritu Kapoor', 'Amit Kapoor', '2002-12-20', '9876543210', 89.56, 2019, 'ritukapoor@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(237, 'Anil Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 94.76, 2018, 'anilverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(238, 'Priya Shah', 'Amit Shah', '2002-10-15', '9999999999', 91.45, 2019, 'priyashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(239, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 90.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(240, 'Anita Sharma', 'Ramesh Sharma', '2002-07-22', '9876543210', 88.20, 2019, 'anitasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(241, 'Vikram Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 87.90, 2018, 'vikrammehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(242, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 89.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(243, 'Rajesh Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 85.30, 2018, 'rajeshkhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(244, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 89.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(245, 'Kunal Sharma', 'Amit Sharma', '2003-03-30', '5555555555', 88.80, 2018, 'kunalsharma@example.com', 'Male', 'Chandigarh', 'Chandigarh', 'Punjab'),
+(246, 'Aditi Tiwari', 'Sanjay Tiwari', '2002-07-05', '9999999999', 94.75, 2019, 'adititiwari@example.com', 'Female', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(247, 'Rohit Kumar', 'Rajesh Kumar', '2003-08-05', '1234567890', 91.67, 2018, 'rohitkumar@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(248, 'Sneha Sharma', 'Amit Sharma', '2002-11-10', '9876543210', 93.80, 2019, 'snehasharma@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(249, 'Vishal Patel', 'Sanjay Patel', '2003-07-15', '5555555555', 85.25, 2018, 'vishalpatel@example.com', 'Male', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(250, 'Meera Singh', 'Ramesh Singh', '2002-09-20', '9999999999', 89.34, 2019, 'meerasingh@example.com', 'Female', 'Kolkata', 'Kolkata', 'West Bengal'),
+(251, 'Ankur Sharma', 'Rajesh Sharma', '2003-04-18', '1234567890', 92.90, 2018, 'ankursharma@example.com', 'Male', 'Chennai', 'Chennai', 'Tamil Nadu'),
+(252, 'Divya Gupta', 'Amit Gupta', '2002-12-20', '9876543210', 89.56, 2019, 'divyagupta@example.com', 'Female', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(253, 'Rajesh Verma', 'Sanjay Verma', '2003-05-05', '5555555555', 94.76, 2018, 'rajeshverma@example.com', 'Male', 'Jaipur', 'Jaipur', 'Rajasthan'),
+(254, 'Neha Shah', 'Amit Shah', '2002-10-15', '9999999999', 91.45, 2019, 'nehashah@example.com', 'Female', 'Ahmedabad', 'Ahmedabad', 'Gujarat'),
+(255, 'Rajat Verma', 'Sanjay Verma', '2003-04-06', '1234567890', 90.50, 2018, 'rajatverma@example.com', 'Male', 'Kolkata', 'Kolkata', 'West Bengal'),
+(256, 'Rohini Malhotra', 'Ramesh Malhotra', '2002-07-22', '9876543210', 88.20, 2019, 'rohinimalhotra@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi'),
+(257, 'Vikas Mehta', 'Amit Mehta', '2003-06-08', '5555555555', 87.90, 2018, 'vikasmehta@example.com', 'Male', 'Mumbai', 'Mumbai', 'Maharashtra'),
+(258, 'Pooja Sinha', 'Sanjay Sinha', '2002-09-10', '9999999999', 89.45, 2019, 'poojasingh@example.com', 'Female', 'Patna', 'Patna', 'Bihar'),
+(259, 'Rishi Khanna', 'Rajesh Khanna', '2003-01-25', '1234567890', 85.30, 2018, 'rishikhanna@example.com', 'Male', 'Lucknow', 'Lucknow', 'Uttar Pradesh'),
+(260, 'Manisha Gupta', 'Rakesh Gupta', '2002-08-18', '9876543210', 89.60, 2019, 'manishagupta@example.com', 'Female', 'Delhi', 'Delhi', 'Delhi');
+
+
+
+
+
+
+#select * from addmision_student;
+#delete from addmision_student;    
+#drop table 11th_d;                           
+#table for clg staff
+create table Jr_Collage_Staff(Sf_Id INTEGER primary key,
+							  Sf_Name VARCHAR(50),
+                              Sf_Post VARCHAR(30),
+                              Sf_address VARCHAR(90),
+                              Sf_Contact_No VARCHAR(20),
+                              Sf_Email VARCHAR(50),
+                              Sf_Gender VARCHAR(20),
+                              Sf_Dob DATE);
+                              
+                              
+
+INSERT INTO Jr_Collage_Staff (Sf_Id, Sf_Name, Sf_Post, Sf_Address, Sf_Contact_No, Sf_Email, Sf_Gender, Sf_Dob)
+VALUES
+(1, 'Arjun Kumar', 'Teacher', '123 Main St, City', '1234567890', 'arjun.kumar@example.com', 'Male', '1988-07-12'),
+(2, 'Aishwarya Sharma', 'Librarian', '456 Elm St, City', '9876543210', 'aishwarya.sharma@example.com', 'Female', '1992-03-20'),
+(3, 'Rajesh Patel', 'Counselor', '789 Oak St, City', '5555555555', 'rajesh.patel@example.com', 'Male', '1985-11-05');
+                              
+INSERT INTO Jr_Collage_Staff (Sf_Id, Sf_Name, Sf_Post, Sf_Address, Sf_Contact_No, Sf_Email, Sf_Gender, Sf_Dob)
+VALUES
+(4, 'Priya Sharma', 'Teacher', '321 Park Road, City', '9876543210', 'priya.sharma@example.com', 'Female', '1990-09-15'),
+(5, 'Rahul Verma', 'Librarian', '567 Lake Avenue, City', '1234567890', 'rahul.verma@example.com', 'Male', '1987-05-25'),
+(6, 'Sneha Patel', 'Counselor', '789 Garden Street, City', '5555555555', 'sneha.patel@example.com', 'Female', '1993-02-10');
+
+
+INSERT INTO Jr_Collage_Staff (Sf_Id, Sf_Name, Sf_Post, Sf_Address, Sf_Contact_No, Sf_Email, Sf_Gender, Sf_Dob)
+VALUES
+(7, 'Neha Gupta', 'Teacher', '111 Rose Lane, City', '1234567890', 'neha.gupta@example.com', 'Female', '1991-06-18'),
+(8, 'Vivek Sharma', 'Librarian', '222 Lily Avenue, City', '9876543210', 'vivek.sharma@example.com', 'Male', '1989-03-27'),
+(9, 'Ananya Singh', 'Counselor', '333 Orchid Road, City', '5555555555', 'ananya.singh@example.com', 'Female', '1994-01-05'),
+(10, 'Rohit Patel', 'Teacher', '444 Sunflower Street, City', '1234567890', 'rohit.patel@example.com', 'Male', '1986-11-20'),
+(11, 'Asha Desai', 'Librarian', '555 Magnolia Avenue, City', '9876543210', 'asha.desai@example.com', 'Female', '1990-08-12'),
+(12, 'Manish Kumar', 'Counselor', '666 Jasmine Lane, City', '5555555555', 'manish.kumar@example.com', 'Male', '1988-04-30'),
+(13, 'Divya Sharma', 'Teacher', '777 Tulip Road, City', '1234567890', 'divya.sharma@example.com', 'Female', '1992-07-15'),
+(14, 'Rajeev Verma', 'Librarian', '888 Poppy Street, City', '9876543210', 'rajeev.verma@example.com', 'Male', '1987-12-10'),
+(15, 'Smita Rao', 'Counselor', '999 Iris Avenue, City', '5555555555', 'smita.rao@example.com', 'Female', '1993-05-25'),
+(16, 'Vikram Patel', 'Teacher', '1010 Daisy Lane, City', '1234567890', 'vikram.patel@example.com', 'Male', '1985-10-05'),
+(17, 'Anushka Sharma', 'Librarian', '1212 Violet Road, City', '9876543210', 'anushka.sharma@example.com', 'Female', '1991-03-18'),
+(18, 'Gaurav Singh', 'Counselor', '1313 Marigold Street, City', '5555555555', 'gaurav.singh@example.com', 'Male', '1989-09-27'),
+(19, 'Kiran Joshi', 'Teacher', '1414 Lily Avenue, City', '1234567890', 'kiran.joshi@example.com', 'Female', '1994-06-05'),
+(20, 'Amit Mehta', 'Librarian', '1515 Orchid Road, City', '9876543210', 'amit.mehta@example.com', 'Male', '1986-01-20');
+
+INSERT INTO Jr_Collage_Staff (Sf_Id, Sf_Name, Sf_Post, Sf_Address, Sf_Contact_No, Sf_Email, Sf_Gender, Sf_Dob)
+VALUES
+(21, 'Ankit Sharma', 'Teacher', '1616 Sunflower Street, City', '1234567890', 'ankit.sharma@example.com', 'Male', '1988-09-12'),
+(22, 'Swati Gupta', 'Teacher', '1717 Iris Avenue, City', '9876543210', 'swati.gupta@example.com', 'Female', '1992-04-20'),
+(23, 'Alok Verma', 'Teacher', '1818 Lily Lane, City', '5555555555', 'alok.verma@example.com', 'Male', '1985-11-05'),
+(24, 'Pooja Patel', 'Teacher', '1919 Rose Road, City', '1234567890', 'pooja.patel@example.com', 'Female', '1990-08-15'),
+(25, 'Arun Kumar', 'Teacher', '2020 Tulip Street, City', '9876543210', 'arun.kumar@example.com', 'Male', '1987-05-25');
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                          
+#student divide by thair percentage (div A)
+create table 11th_A(St_Id int ,
+					St_Roll_No INTEGER AUTO_INCREMENT primary key,
+                    St_Name VARCHAR(50),
+                    St_Dob DATE,
+                    St_City VARCHAR(50),
+                    St_Gender VARCHAR(20),
+                    St_10th_Percentage DECIMAL(8,2));
+                   
+#add primary key and auto increment
+#ALTER TABLE 11th_A
+#modify St_Roll_No INT AUTO_INCREMENT primary key;
+
+#student divide by thair percentage (div B)
+create table 11th_B(St_Id int ,
+					St_Roll_No INTEGER primary key AUTO_INCREMENT,
+                    St_Name VARCHAR(50),
+                    St_Dob DATE,
+                    St_City VARCHAR(50),
+                    St_Gender VARCHAR(20),
+                    St_10th_Percentage DECIMAL(8,2));
+#student divide by thair percentage (div C)
+create table 11th_C(St_Id int ,
+					St_Roll_No INTEGER primary key AUTO_INCREMENT,
+                    St_Name VARCHAR(50),
+                    St_Dob DATE,
+                    St_City VARCHAR(50),
+                    St_Gender VARCHAR(20),
+                    St_10th_Percentage DECIMAL(8,2));
+                    
+#student divide by thair percentage (div D)
+create table 11th_D(St_Id int ,
+					St_Roll_No INTEGER primary key AUTO_INCREMENT,
+                    St_Name VARCHAR(50),
+                    St_Dob DATE,
+                    St_City VARCHAR(50),
+                    St_Gender VARCHAR(20),
+                    St_10th_Percentage DECIMAL(8,2));
+
+delimiter $$
+create trigger insert_data_11th
+before insert 
+on   Addmision_Student for each row 
+begin 
+declare  St_10th_Percentage int ;
+ set  St_10th_Percentage  = new.St_10th_Percentage  ;
+  
+if  St_10th_Percentage>85 and St_10th_Percentage <100 then 
+
+insert into 11th_A(St_Id ,St_Name ,St_Dob ,St_City,St_Gender ,St_10th_Percentage  ) values(new.St_Id ,new.St_Full_Name,new.St_Dob,new.St_City,new.St_Gender,new.St_10th_Percentage);
+elseif St_10th_Percentage >70 and St_10th_Percentage <=85 then
+insert into 11th_B(St_Id,St_Name ,St_Dob ,St_City,St_Gender ,St_10th_Percentage  ) values(new.St_Id,new.St_Full_Name,new.St_Dob,new.St_City,new.St_Gender,new.St_10th_Percentage);
+elseif St_10th_Percentage>50 and St_10th_Percentage<=70 then
+insert into 11th_C(St_Id,St_Name ,St_Dob ,St_City,St_Gender ,St_10th_Percentage  ) values(new.St_Id,new.St_Full_Name,new.St_Dob,new.St_City,new.St_Gender,new.St_10th_Percentage);
+elseif St_10th_Percentage >34 and St_10th_Percentage<=50 then 
+insert into 11th_D(St_Id,St_Name ,St_Dob ,St_City,St_Gender ,St_10th_Percentage  ) values(new.St_Id,new.St_Full_Name,new.St_Dob,new.St_City,new.St_Gender,new.St_10th_Percentage);
+
+END IF;
+
+
+end $$
+delimiter ;
+
+
+create table student_insert_backup(id_insert varchar(15),
+						name varchar(20),
+						owner varchar(15),
+						date date);
+
+#to store insert value                         
+delimiter $$
+create trigger insert_backup
+after insert 
+on  Addmision_Student  for each row 
+begin 
+insert into student_insert_backup values(new.St_Id ,new.St_Full_Name,'Admin',now());
+end $$
+delimiter ;
+drop trigger update_info;
+#delete from 11th_a;
+drop trigger insert_data_11th;
+select * from 11th_b;
+
+#commmand to find students where name start with s 
+# aggregatopn function
+select * from Addmision_Student
+where St_Full_Name  LIKE 's%';
+
+select * from student_insert_backup ;
+select avg(st_10th_percentage) 
+from Addmision_Student
+where St_Full_Name like 'p%';
+
+
+select max(st_10th_percentage) as highest
+from  Addmision_Student
+where st_full_name like 'm%';
+
+
+select max(st_10th_percentage) as highest
+from  Addmision_Student
+where st_full_name like 
+'______________';
+
+select max(St_Dob)
+from addmision_student;
+
+select avg(salary) 
+from customers
+where name like 'k%';
+
+# count
+select count(st_full_name) 
+from addmision_student
+where name like '%k';
+
+#group by function
+
+select st_dob ,count(st_full_name)
+from addmision_student
+group by st_dob;
+select * from  addmision_student;
+
+#creating function to find student_name using studentid
+
+delimiter $$
+create function getname(id1 int )
+returns varchar(50)
+deterministic reads sql data 
+begin 
+	declare m varchar(50);
+    select st_full_name into m 
+    from  addmision_student  where St_id=id1;
+    return m;
+end $$
+delimiter ;
+
+#drop function getname ;
+select getname(103);
+#select * from 11th_a;
+
+#to see mumbai area student;
+delimiter $$
+create procedure mumbai_student()
+begin
+
+select * from addmision_student
+where St_City = 'mumbai';
+end$$
+delimiter ;
+
+call mumbai_student();
+
+#to see all teachers data 
+delimiter $$
+create procedure teacher()
+begin
+
+select * from Jr_Collage_Staff
+where sf_post = 'teacher';
+end$$
+delimiter ;
+call teacher();
+
+#using inner join connect 2 table 
+select 11th_a.St_name,addmision_student.St_10th_passing_year
+from 11th_a
+inner join addmision_student
+on 11th_a.st_id=addmision_student.st_id;
+
+
+select * from 11th_a;
+#select * from addmision_student;
+
